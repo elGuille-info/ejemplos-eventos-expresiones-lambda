@@ -12,7 +12,7 @@ Aquí te dejo los conceptos explicados (copiados directamente del post)<br>
 ## Lo explicado en el artículo
 Sin el código.<br>
 <br>
-### Crear métodos de evento con expresiones lambda para asignarlos manualmente (VB y C#)<br>
+<h2>Crear métodos de evento con expresiones lambda para asignarlos manualmente (VB y C#)</h2>
 <br>
 Pues eso… hoy te voy a explicar cómo crear métodos lambda (o métodos de evento que usan expresiones lambda) para asignar a los eventos de los controles. Esto lo estoy usando últimamente hasta que la gente de Visual Studio mejore el diseñador de formularios para .NET 5.0 (y .NET Core 3.1) ya que… deja mucho que desear y da muchos quebraderos de cabeza… nada que ver con el diseñador de WinForm (Windows.Forms Designer) de .NET Framework.<br>
 <br>
@@ -22,7 +22,7 @@ Antes de seguir con el código de ejemplo, te explico lo que dice la documentaci
 <br>
 Y esta es la definición de las expresiones lambda en C#.<br>
 <br>
-### ¿Qué son las expresiones lambda?<br>
+<h3>¿Qué son las expresiones lambda?</h3>
 Definición en la documentación de Visual Basic:<br>
 <br>
 Una expresión lambda es una función o subrutina sin un nombre que se puede usar siempre que un delegado sea válido. Las expresiones lambda pueden ser funciones o subrutinas y pueden ser de una o varias líneas. Puede pasar valores del ámbito actual a una expresión lambda.<br>
