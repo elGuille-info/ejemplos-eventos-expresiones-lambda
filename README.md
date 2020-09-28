@@ -43,7 +43,7 @@ Expresiones lambda (referencia de C#) en la documentación de Microsoft.<br>
 Lo que dice la documentación sobre el operador =><br>
 El token => se admite de dos formas: como el operador lambda y como un separador de un nombre de miembro y la implementación del miembro en una definición de cuerpo de expresión.<br>
 <br>
-### Ejemplos de expresiones lambda
+  <h4>Ejemplos de expresiones lambda</h4>
 Imagina que quieres asignar al evento Click de un botón llamado buttonAbrir y cuando se produzca quieres indicarle que llame al método Abrir, en lugar de crear un método específico, que de forma predeterminada tendrá el siguiente aspecto:<br>
 <br>
 Puedes hacerlo de esta otra forma (por ejemplo dentro del evento Load del formulario):<br>
@@ -68,7 +68,6 @@ Sigamos con el código para usar una expresión lambda para hacer lo mismo que e
 Lo primero es definir la expresión lambda:<br>
 <br>
 <h5>Nota:</h5>
-<br>
 He usado los guiones bajos para que el código sea más legible.<br>
 La he declarado explícitamente como del tipo EventHandler porque están declaradas en el cuerpo del la clase. Si estuviese dentro de un método puedes declararlas con:<br>
 <br>
@@ -122,7 +121,7 @@ Este sería el código de ejemplo:<br>
 <br>
 Pero en mi caso en particular esta última solución no me sirve, ya que esa expresión lambda la tenía que usar en varios métodos de la misma clase.<br>
 <br>
-<h5>NoOta (repetimos):</h5>
+<h5>Nota (repetimos):</h5>
 Al definir los parámetros de la expresión lambda en C# no es necesario indicar el tipo de datos de cada argumento, con indicar los nombres de los identificadores (variables) es suficiente, tal como te muestre en el código anterior.<br>
 <br>
 Y hasta aquí hemos llegado… (el fin)<br>
