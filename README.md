@@ -10,7 +10,7 @@ Si tienes algún comentario, mejor que lo dejes en el post original, ya que esto
 Aquí te dejo los conceptos explicados (copiados directamente del post)<br>
 <br>
 ## Lo explicado en el artículo
-Sin el código.<br>
+Sin el código (en la sección <b>Wiki</b> lo tienes con el código, pero no se muestra muy bien que digamos).<br>
 <br>
 <h2>Crear métodos de evento con expresiones lambda para asignarlos manualmente (VB y C#)</h2>
 <br>
