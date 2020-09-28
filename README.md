@@ -10,9 +10,9 @@ Si tienes algún comentario, mejor que lo dejes en el post original, ya que esto
 Aquí te dejo los conceptos explicados (copiados directamente del post)<br>
 <br>
 ## Lo explicado en el artículo
-<br>
 Sin el código.<br>
-Crear métodos de evento con expresiones lambda para asignarlos manualmente (VB y C#)
+<br>
+### Crear métodos de evento con expresiones lambda para asignarlos manualmente (VB y C#)<br>
 <br>
 Pues eso… hoy te voy a explicar cómo crear métodos lambda (o métodos de evento que usan expresiones lambda) para asignar a los eventos de los controles. Esto lo estoy usando últimamente hasta que la gente de Visual Studio mejore el diseñador de formularios para .NET 5.0 (y .NET Core 3.1) ya que… deja mucho que desear y da muchos quebraderos de cabeza… nada que ver con el diseñador de WinForm (Windows.Forms Designer) de .NET Framework.<br>
 <br>
@@ -22,7 +22,7 @@ Antes de seguir con el código de ejemplo, te explico lo que dice la documentaci
 <br>
 Y esta es la definición de las expresiones lambda en C#.<br>
 <br>
-## ¿Qué son las expresiones lambda?<br>
+### ¿Qué son las expresiones lambda?<br>
 Definición en la documentación de Visual Basic:<br>
 <br>
 Una expresión lambda es una función o subrutina sin un nombre que se puede usar siempre que un delegado sea válido. Las expresiones lambda pueden ser funciones o subrutinas y pueden ser de una o varias líneas. Puede pasar valores del ámbito actual a una expresión lambda.<br>
@@ -43,7 +43,7 @@ Expresiones lambda (referencia de C#) en la documentación de Microsoft.<br>
 Lo que dice la documentación sobre el operador =><br>
 El token => se admite de dos formas: como el operador lambda y como un separador de un nombre de miembro y la implementación del miembro en una definición de cuerpo de expresión.<br>
 <br>
-## Ejemplos de expresiones lambda<br>
+### Ejemplos de expresiones lambda
 Imagina que quieres asignar al evento Click de un botón llamado buttonAbrir y cuando se produzca quieres indicarle que llame al método Abrir, en lugar de crear un método específico, que de forma predeterminada tendrá el siguiente aspecto:<br>
 <br>
 Puedes hacerlo de esta otra forma (por ejemplo dentro del evento Load del formulario):<br>
@@ -60,14 +60,14 @@ Pero imagina que quieres hacer la misma asignación de una expresión lambda en 
 Si los controles están declarados con WithEvents y estás usando el diseñador de Windows Forms de Visual Studio para una aplicación de .NET Framework, podrías hacer algo como esto para que el método variosUndo_Click que para manejar los eventos de un botón llamado buttonUndo y para un menú con nombre menuUndo estaría definido de esta forma:<br>
 <br>
 <br>
-#### Nota:
+  <h5>Nota:</h5>
 En C# (que yo sepa) no hay equivalente para esto, habría que asignar de forma independiente cada manejador de evento.<br>
 <br>
 Sigamos con el código para usar una expresión lambda para hacer lo mismo que en el ejemplo anterior.<br>
 <br>
 Lo primero es definir la expresión lambda:<br>
 <br>
-#### Nota:
+<h5>Nota:</h5>
 <br>
 He usado los guiones bajos para que el código sea más legible.<br>
 La he declarado explícitamente como del tipo EventHandler porque están declaradas en el cuerpo del la clase. Si estuviese dentro de un método puedes declararlas con:<br>
@@ -82,7 +82,7 @@ Así que, si queremos definirlo a nivel de clase, habrá que tener en cuenta que
 <br>
 Aquí tienes la forma de hacer lo mismo que en el código de Visual Basic (he añadido la definición de richTextBoxCodigo como estático (compartido, Shared en Visual Basic):<br>
 <br>
-#### Nota:
+<h5>Nota:</h5>
 Al definir los parámetros de la expresión lambda en C# no es necesario indicar el tipo de datos de cada argumento, con indicar los nombres de los identificadores (variables) es suficiente, tal como te moestraré en otro ejemplo.<br>
 <br>
 Una cosa interesante, y a tener en cuenta, en la definición de la expresión lambda asignada a la variable lambdaUndo es que se usa una expresión if como resultado. En ese caso es obligatorio usar las llaves de apertura y cierre: { };, si no, dará error.<br>
@@ -107,7 +107,7 @@ Error CS0246  The type or namespace name 'richTextBoxCodigo' could not be found 
 Error CS0538  'richTextBoxCodigo' in explicit interface declaration is not an interface<br>
 Error CS0501  'Form1.Undo()' must declare a body because it is not marked abstract, extern, or partial<br>
 <br>
-#### Nota:
+<h5>Nota:</h5>
 Ahora que he copiado la definición de las expresiones lambda en la documentación de C# (para pegarla arriba), al ver lo que en esa documentación llaman lambda de instrucción, veo que ahí se indica que hay que encerrar la expresión entre llaves.<br>
 <br>
 En mi defensa te dirá que la documentación de C# la he leído cuando estaba revisando lo que ya había escrito hasta después del siguiente ejemplo. En fin…
@@ -122,7 +122,7 @@ Este sería el código de ejemplo:<br>
 <br>
 Pero en mi caso en particular esta última solución no me sirve, ya que esa expresión lambda la tenía que usar en varios métodos de la misma clase.<br>
 <br>
-#### Nota (repetimos):
+<h5>NoOta (repetimos):</h5>
 Al definir los parámetros de la expresión lambda en C# no es necesario indicar el tipo de datos de cada argumento, con indicar los nombres de los identificadores (variables) es suficiente, tal como te muestre en el código anterior.<br>
 <br>
 Y hasta aquí hemos llegado… (el fin)<br>
